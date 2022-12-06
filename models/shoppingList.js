@@ -17,3 +17,14 @@ export async function postListItem(listItem) {
   );
   return data.rows[0];
 }
+
+export async function deleteListItem(id) {
+  {
+    const deleteListItem = await query(
+      "DELETE FROM shopping WHERE id = $1 RETURNING *;",
+      [id]
+    );
+    return deleteListItem.rows;
+  } 
+
+}

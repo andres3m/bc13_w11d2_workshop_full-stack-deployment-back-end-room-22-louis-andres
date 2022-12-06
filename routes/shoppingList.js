@@ -15,4 +15,12 @@ router.post("/", async (req, res) => {
   res.status(201).json({ success: true, payload: result });
 });
 
+router.delete("/:id", async (req, res) => {
+  {
+       const result = await deleteListItem(req.params.id);
+       return res.json({success:true, payload: result});
+   } 
+   
+})
+
 export default router;
