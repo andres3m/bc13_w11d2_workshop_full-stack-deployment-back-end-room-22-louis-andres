@@ -1,5 +1,5 @@
 import express from "express";
-import { getShoppingList, postListItem, deleteListItem } from "../models/shoppingList.js";
+import { getShoppingList, postListItem } from "../models/shoppingList.js";
 
 
 const router = express.Router();
@@ -16,12 +16,12 @@ router.post("/", async (req, res) => {
   res.status(201).json({ success: true, payload: result });
 });
 
-router.delete("/:id", async (req, res) => {
+/*router.delete("/:id", async (req, res) => {
   {
        const result = await deleteListItem(req.params.id);
        return res.json({success:true, payload: result});
    } 
    
-})
+})*/
 
 export default router;
