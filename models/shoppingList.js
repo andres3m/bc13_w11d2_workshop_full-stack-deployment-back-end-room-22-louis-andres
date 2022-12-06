@@ -20,7 +20,7 @@ export async function postListItem(listItem) {
 
 export async function deleteListItem(id) {
   {
-    const deleteListItem = await query(
+    const deleteListItem = await pool.query(
       "DELETE FROM shopping WHERE id = $1 RETURNING *;",
       [id]
     );
