@@ -1,5 +1,6 @@
 import express from "express";
-import { getShoppingList, postListItem } from "../models/shoppingList.js";
+import { getShoppingList, postListItem, deleteListItem } from "../models/shoppingList.js";
+
 
 const router = express.Router();
 
